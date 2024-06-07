@@ -1,0 +1,132 @@
+@use 'base/variables' as *;
+@use 'sass:color';
+// Importamos Bootstrap de node_modules
+@import '../../node_modules/bootstrap/scss/bootstrap.scss';
+
+
+// Personalización de los .nav-link
+$nav-link-color: $white;
+$nav-link-hover-color: color.scale($white, $lightness: -20%);
+
+
+// Personalización de btn-primary
+.btn-primary {
+    @include button-variant($white, $white, $dark_blue, color.scale($white, $lightness: -10%), color.scale($white, $lightness: -10%), $dark_blue, $white, $white, $dark_blue, $white, $white, $dark_blue);
+}
+
+// Personalización de btn-outline-secondary
+.btn-outline-secondary {
+    @include button-variant($white, $dark_blue, $dark_blue, color.scale($white, $lightness: -10%), $dark_blue, $dark_blue, $white, $dark_blue, $dark_blue, $white, $dark_blue, $dark_blue);
+}
+
+// Personalización de btn-check
+  .btn-check:checked + .btn-outline-secondary, :not(.btn-check) + .btn-outline-secondary:active, .btn-outline-secondary:first-child:active, .btn-outline-secondary.active, .btn-outline-secondary.show {
+    color: $white;
+    background-color: $dark_blue;
+    border-color: $dark_blue;
+  }
+
+// Personalización de btn-secondary
+.btn-secondary {
+    @include button-variant($dark_blue, $dark_blue, $white, $medium-blue, $medium-blue, $white, $dark_blue, $dark_blue, $white,$dark_blue, $dark_blue, $white);
+}
+
+// Personalización de btn-success
+.btn-success {
+  @include button-variant($white, $dark_blue, $dark_blue, color.scale($white, $lightness: -3%), $dark-blue, $dark-blue, $white, $dark_blue, $dark_blue,$white, $dark_blue, $dark_blue);
+}
+
+// Personalización de los form-control
+
+// Color del borde
+.form-control {
+    border: var(--bs-border-width) solid $dark_blue;
+}
+
+// Elimino color cuando recibe el foco
+.form-control:focus {
+    border-color: $dark_blue;
+    box-shadow: 0 0 0 0.25rem transparent;
+}
+
+
+// Personalización de form-range
+.form-range:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 0 1px #ffffff, 0 0 0 0.25rem rgba(39, 42, 87, 0.25);
+}
+
+.form-range::-webkit-slider-thumb {
+    width: 0.5rem;
+    height: 1rem;
+    margin-top: -0.25rem;
+    -webkit-appearance: none;
+            appearance: none;
+    background-color: $dark_blue;
+    border: 0;
+    border-radius: 1rem;
+    -webkit-transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  }
+
+  .form-range::-webkit-slider-thumb:active {
+    background-color: $medium_blue;
+  }
+
+  // Personalización de form-check-input
+  .form-check-input:checked {
+  background-color: $dark_blue;
+  border-color: $dark_blue;
+}
+
+.form-check-input:focus {
+  border-color: $dark_blue;
+  outline: 0;
+  box-shadow: 0 0 0 0rem rgba(39, 42, 87, 0);
+}
+
+// Personalización de los form-select
+// Adapto el color de la letra
+.form-select {
+    color: $medium_blue;
+    border: var(--bs-border-width) solid $dark_blue;
+}
+
+// Elimino el color del borde cuando recibe el foco
+.form-select:focus {
+    border-color: $dark_blue;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem transparent;
+}
+
+// // Personalización botones grandes
+// .btn-lg {
+//     @include button-size(1rem, 3rem, $fsize-2, 0);
+// }
+
+// // Creación botones con tamaño propio a partir de mixin Bootstrap 
+// .btn-lg-firstOwn {
+//     @include button-size(1rem, 5.5rem, $fsize-2, 0);
+// }
+
+// .btn-lg-secondOwn {
+//     @include button-size(1rem, 2.5rem, $fsize-2, 0);
+// }
+
+// // Personalización de nav-tabs y sus elementos internos
+// .nav-tabs .nav-link {
+//     border: var(--bs-nav-tabs-border-width) solid transparent;
+//     border-top-left-radius: var(--bs-nav-tabs-border-radius);
+//     border-top-right-radius: var(--bs-nav-tabs-border-radius);
+// }
+
+// .nav-tabs .nav-link:hover,
+// .nav-tabs .nav-link:focus {
+//     border-color: transparent;
+//     color: $grey;
+// }
+
+// .nav-tabs .nav-link.active {
+//     color: $grey;
+//     background-color: $light_green;
+//     border-color: transparent;
+// }

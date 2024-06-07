@@ -1,0 +1,182 @@
+@use '../custom' as *;
+@use '../base/variables' as *;
+@use 'sass:color';
+@use '../base/mixins' as mix;
+
+.details{
+    &__search{
+        background-color: $light_blue;
+    }
+
+    &__form{
+
+        &-info{
+            display:none;
+            @include media-breakpoint-up(lg){
+                display:block;
+                font-size: $fsize-5;
+                font-weight: bold;
+                color: $dark_blue;
+            }
+        }
+
+        &-submit{
+            width: 100%;
+        }
+
+        &-hidden{
+            display: block;
+            font-size: $fsize-5;
+            font-weight: bold;
+            color: $dark_blue;
+
+            @include media-breakpoint-up(lg){
+                display:none;
+            }
+        }
+
+        &-filters{
+            &-link{
+                text-decoration: none;
+                font-size: $fsize-5;
+                font-weight: bold;
+                color: $dark_blue;
+            }
+
+            &-hidden{
+                display: block;
+                background-color: $white;
+                border-radius: 10px;
+            }
+
+            &-title{
+                font-size: $fsize-4;
+                font-weight: bold;
+                color: $medium_blue;
+            }
+
+            &-precio-label{
+                font-size: $fsize-5;
+                color: $dark_blue;
+            }
+
+            &-services-label{
+                font-size: $fsize-5;
+                color: $dark_blue;
+            }
+
+            &-categories{
+                min-height: 25vh;
+            }
+
+            &-checklabel{
+                &-graphics{
+                    width: 1.5rem;
+                    height: auto;
+                    fill: $medium_blue;
+                }
+    
+                &-text{
+                    font-size: $fsize-5;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+
+    &__header-title-text{
+        font-size: $fsize-3;
+        color: $dark_blue;
+        font-weight: bold;
+    }
+
+    &__header-direction-text{
+        font-size: $fsize-5;
+        color: $medium_blue;
+    }
+
+    &__footer{
+        
+        &-service{
+            padding: 0.8rem 2rem;
+            border: 1px solid $dark_blue;
+            border-radius: 0.7rem;
+            display: inline-block;
+            font-size: $fsize-5;
+            color: $dark_blue;
+        }
+
+        &-text{
+            font-size: $fsize-3;
+            color: $medium_blue;
+        }
+
+    }
+
+    &__book{
+        
+        &-card{
+            border: 1px solid $dark_blue;
+            box-shadow: 0px 0px 5px 2px rgba(39, 42, 87, 0.25);
+            border-radius: 10px;
+        }
+
+        &-price{
+            &-lgtext{
+                font-size: $fsize-3;
+                font-weight: bold;
+                color: $dark_blue;
+            }
+            &-smtext{
+                font-size: $fsize-4;
+                color: $medium_blue;
+            }
+        }
+
+        &-resume{
+
+            &-card{
+                border: 1px solid $medium_blue;
+                border-radius: 10px;
+            }
+
+            &-entrada{
+                border-bottom: 1px solid $medium_blue;
+                border-right: 1px solid $medium_blue;
+            }
+
+            &-salida{
+                border-bottom: 1px solid $medium_blue;
+            }
+
+            &-text{
+                font-size: $fsize-5;
+                font-weight: bold;
+                color: $dark_blue;
+            }
+
+            &-date, &-number{
+                font-size: $fsize-4;
+                color: $medium_blue;
+            }
+            
+        }
+
+        &-total{
+            border-top: 1px solid $medium_blue;
+
+            &-text, &-price{
+                font-size: $fsize-4;
+                font-weight: bold;
+                color: $dark_blue;
+            }
+
+        }
+            
+        
+        
+    }
+    
+
+}
+

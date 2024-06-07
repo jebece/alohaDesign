@@ -1,0 +1,55 @@
+@use '../custom' as *;
+@use '../base/variables' as *;
+@use 'sass:color';
+
+.header{
+    background-color: $dark_blue;
+    
+    &__logo{
+        display: none;
+    }
+
+    &__buttons{
+        display: none;
+    }
+
+    @include media-breakpoint-up(lg){
+        &__logo{
+            display: block;
+        }
+
+        .logo{
+            max-width: 7rem;
+            transition: transform 0.3s;
+        }
+
+        .logo:hover{
+            transform: scale(1.1);
+        }
+
+        &__buttons{
+            display: flex;
+            justify-content: right;
+        }
+        
+        &__btn{
+            font-size: $fsize-6;
+            font-weight: bold;
+        }
+
+        &__btn-close{
+            max-height: 2rem;
+            font-size: $fsize-6;
+            font-weight: bold;
+        }
+
+        &__icon{
+            transition: fill 0.3s ease, transform 0.3s ease;
+        }
+
+        &__icon:hover{
+            fill: color.scale($white, $lightness: 20%);
+            transform: scale(1.1); 
+        }
+    }
+}

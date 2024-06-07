@@ -1,0 +1,47 @@
+@use '../custom' as *;
+@use '../base/variables' as *;
+@use 'sass:color';
+@use '../base/mixins' as mix;
+
+.registro{
+
+    &__image{
+        display:none;
+
+        @include media-breakpoint-up(lg){
+            display: block;
+            @include mix.bg-image('registerHotel.jpg', center, center);
+            background-size: cover;
+            min-height: calc(100vh - 5.455rem);    
+        }
+    }
+
+    &__form{
+        min-height: calc(100vh - 7.08rem);
+
+        @include media-breakpoint-up(lg){
+            min-height: calc(100vh - 5.455rem);    
+        }
+        
+    }
+
+    &__card{
+        &-title{
+            font-size: $fsize-3;
+            font-weight: bold;
+            color: $dark_blue;
+        }
+
+        &-label{
+            font-size: $fsize-4;
+            font-weight: bold;
+            color: $dark_blue;
+        }
+
+        &-submit{
+            width: 100%;
+        }
+    }
+    
+}
+

@@ -1,0 +1,23 @@
+@use 'variables' as var;
+@use 'sass:color';
+
+// Mixins
+
+// Box-sizing
+@mixin box-sizing($box-model){
+    box-sizing: $box-model;
+}
+
+// Imagen de fondo
+@mixin bg-header($color1, $color2, $image){
+    background-image: linear-gradient(to right, $color1 0%, $color2 100%), url('../../assets/img/'+$image);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+@mixin bg-image($image, $horizontalPosition, $verticalPosition){
+    background-image: url('../../assets/img/'+$image);
+    background-repeat: no-repeat;
+    background-position: $horizontalPosition $verticalPosition;
+}

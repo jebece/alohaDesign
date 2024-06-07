@@ -1,0 +1,22 @@
+@use 'variables' as var;
+@use 'mixins' as mix;
+
+html {
+    @include mix.box-sizing(border-box);
+}
+
+*,
+*::before,
+*::after {
+    @include mix.box-sizing(inherit);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var.$main_font;
+    color: var.$dark_blue;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
